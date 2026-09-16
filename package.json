@@ -1,0 +1,30 @@
+{
+  "name": "nickochat-app",
+  "version": "1.0.0",
+  "description": "Un chat en tiempo real",
+  "homepage": "https://github.com/Nickokus/NickoChat-App#readme",
+  "bugs": {
+    "url": "https://github.com/Nickokus/NickoChat-App/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nickokus/NickoChat-App.git"
+  },
+  "license": "ISC",
+  "author": "Nickokus",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "socket.io": "^4.8.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

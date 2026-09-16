@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NickoChat App</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+
+  <body>
+    <main class="app">
+      <section id="loginScreen" class="login-card">
+        <p class="eyebrow">Chat en tiempo real</p>
+        <h1>NickoChat App</h1>
+        <p>Ingresá con un nombre para entrar al canal global.</p>
+
+        <form id="loginForm">
+          <label for="usernameInput">Nombre</label>
+          <input
+            id="usernameInput"
+            type="text"
+            maxlength="20"
+            placeholder="Ej: Nicolás"
+            autocomplete="off"
+            required
+          />
+          <button type="submit">Entrar</button>
+        </form>
+
+        <p id="loginError" class="error"></p>
+      </section>
+
+      <section id="chatScreen" class="dashboard hidden">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Canal global</p>
+            <h1>NickoChat App</h1>
+          </div>
+
+          <div class="current-user">
+            <span>Conectado como</span>
+            <strong id="currentUserName"></strong>
+          </div>
+        </header>
+
+        <aside class="users-panel">
+          <h2>Conectados</h2>
+          <p><strong id="onlineCount">0</strong> usuarios online</p>
+          <ul id="usersList"></ul>
+        </aside>
+
+        <section class="chat-panel">
+          <div id="messages" class="messages"></div>
+
+          <form id="messageForm" class="message-form">
+            <input
+              id="messageInput"
+              type="text"
+              maxlength="180"
+              placeholder="Escribí un mensaje..."
+              autocomplete="off"
+            />
+            <button type="submit">Enviar</button>
+          </form>
+        </section>
+      </section>
+    </main>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/app.js"></script>
+  </body>
+</html>
